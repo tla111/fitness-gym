@@ -8,7 +8,7 @@ import BodyPart from './BodyPart';
 // import LeftArrowIcon from '../assets/icons/left-arrow.png';
 
 
-const HorizontalScrollbar = ({ data }) => {
+const HorizontalScrollbar = ({ data, setBodyPart, bodyPart }) => {
     return (
         <div>
             {data.map((item) => (
@@ -18,7 +18,7 @@ const HorizontalScrollbar = ({ data }) => {
                     title={item.id || item}
                     m="0 40px"
                 >
-                    {item}
+                    <BodyPart item={item} setBodyPart={setBodyPart} bodyPart={bodyPart} />
                 </Box>
             )
             )}
