@@ -5,12 +5,31 @@ import { exerciseOptions, fetchData } from '../utils/fetchData';
 
 const SearchExercises = () => {
     const [search, setSearch] = useState("")
+    const [exercises, setExercises] = useState([])
+
+
+    useEffect(() => {
+        first
+
+        return () => {
+            second
+        }
+    }, [third])
+
 
     const handleSearch = async () => {
         if (search) {
             const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
 
-            console.log(exercisesData);
+            const searchedExercises = exercisesData.filter(
+                (item) => item.name.toLowerCase().includes(search)
+                    || item.target.toLowerCase().includes(search)
+                    || item.equipment.toLowerCase().includes(search)
+                    || item.bodyPart.toLowerCase().includes(search),
+            );
+
+            setSearch("")
+            setExercises(searchedExercises)
         }
 
     }
