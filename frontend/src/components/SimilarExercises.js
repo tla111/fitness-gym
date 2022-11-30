@@ -1,8 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { Typography, Box, Stack } from '@mui/material';
+
+import HorizontalScrollbar from './HorizontalScrollbar';
+
 
 const SimilarExercises = () => {
     return (
-        <div>SimilarExercises</div>
+        <Box>
+            <Typography>
+
+            </Typography>
+            <Stack>
+
+            </Stack>
+        </Box>
     )
 }
 
