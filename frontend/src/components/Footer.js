@@ -1,8 +1,15 @@
-import React from 'react'
+
+import React from 'react';
+import { Box, Stack, Typography } from '@mui/material';
+import Logo from '../assets/images/Logo-1.png';
 
 const Footer = () => {
     return (
-        <div>Footer</div>
+        <Box>
+            <Stack>
+                <img />
+            </Stack>
+        </Box>
     )
 }
 
